@@ -3,13 +3,15 @@
 
 from math import *
 
+#example transform function
 def expTransform(point):
     z = point[1]
     r = 0.2 + 10.0*exp(-z)
     x = r*sin(point[0])
     y = r*cos(point[0])
     return (x, y, z)
-
+	
+#example transform function
 def triple(p):
     u = p[0]
     v = p[1]
