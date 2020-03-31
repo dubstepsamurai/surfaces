@@ -46,13 +46,13 @@ def transformedVertexList(spacing, cols, rows, colOffset, rowOffset, transform):
 		vertices[i] = transform(vertices[i])
 	return vertices
 	
-subs = 2
-cols = 3
-rows = 3
-spacing = (1, 1)
-colOffset = 0
-rowOffset = 0
-transform = triple
+subs = 2 #subdivisions in a grid cell - higher number gives smoother curve
+cols = 3 #number of grid cells along horizontal axis
+rows = 3 #number of grid cells along vertical axis
+spacing = (1, 1) #vector representing dimensions of cell
+colOffset = 0 #to allow values to extend into negative or start at arbitrary value
+rowOffset = 0 
+transform = triple #surface function of form (u, v) -> (x, y, z)
 
 vertices = transformedVertexList(spacing, cols, rows, \
 	colOffset, rowOffset, transform)
