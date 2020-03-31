@@ -1,4 +1,5 @@
-#REM Python console: blank lines terminate function definition
+#Create a mesh of curved surface grid according to the function entered
+#as 'transform'
 
 from math import *
 
@@ -58,3 +59,4 @@ vertices = transformedVertexList(spacing, cols, rows, \
 edges = makeEdgeList(vertices, cols, rows, subs)
 
 print(str(vertices))
+print(str(edges))
